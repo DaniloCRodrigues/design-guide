@@ -1,0 +1,301 @@
+$blue: #3c7ffd;
+$weakgray: #f2f4f8;
+$gray: #898f9b;
+
+* {
+  font-family: "Raleway", sans-serif;
+  border: none;
+}
+
+/*===========SCROLLVBAR===========*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: $weakgray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray;
+  border-radius: 15px;
+  width: 10px;
+}
+
+
+/*===========SIDENAV===========*/
+#nav-mobile {
+  .logo {
+    text-align: center;
+    font-weight: bold;
+    color: $blue;
+    font-size: 27px;
+    margin-top: 23px;
+  }
+
+  .menu-subTitle {
+    font-weight: bold;
+    padding: 50px 32px 0;
+  }
+
+  .menu-item {
+    width: 250px;
+    font-weight: 100;
+    color: $gray;
+
+    &:hover {
+      font-weight: bold;
+      width: 250px;
+      border-radius: 0 20px 20px 0;
+    }
+  }
+}
+
+/*===========NAVBAR===========*/
+.info {
+  display: flex;
+  align-items: center;
+  background-color: $weakgray;
+  width: 100%;
+  margin-bottom: 33px;
+
+  .menu-lateral {
+    padding-left: 16px;
+    color: #a2a5ac;
+  }
+
+  .img-projeto {
+    background: white;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+
+  .name-projeto {
+    font-weight: bold;
+    margin: 0;
+    font-size: 20px;
+    padding-right: 35px;
+  }
+
+  .btn-info-open,
+  .btn-info-close {
+    cursor: pointer;
+    background: white;
+    border-radius: 5px;
+    margin-right: 16px;
+    position: absolute;
+    right: 10px;
+
+    & i {
+      padding-top: 2px;
+      color: $blue;
+    }
+  }
+
+  .btn-info-close {
+    display: none;
+  }
+}
+
+.infoextra {
+  background-color: $weakgray;
+  padding-bottom: 9px;
+  padding-left: 110px;
+  margin-top: -33px;
+  margin-bottom: 33px;
+  display: none;
+
+  & h3 {
+    margin: 0;
+    font-size: 13px;
+
+    & a {
+      font-weight: bold;
+      color: #3c7ffd;
+    }
+  }
+
+  .btn-acessarStyle {
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+    padding-right: 10px;
+    margin-top: 10px;
+    max-width: 170px;
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #3c7ffd;
+
+    & img {
+      margin: 3px 10px 3px 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .info {
+    .img-projeto {
+      width: 85px;
+      height: 85px;
+      margin: 10px 15px;
+    }
+
+    .name-projeto {
+      font-size: 25px;
+      align-self: baseline;
+      margin-top: 10px;
+    }
+
+    .btn-info-open,
+    .btn-info-close {
+      display: none !important;
+    }
+  }
+
+  .infoextra {
+    display: block !important;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0);
+    top: 75px;
+    left: 46px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    margin-left: 300px;
+
+    .menu-lateral {
+      display: none;
+    }
+
+    .infoextra {
+      left: 306px;
+
+    }
+  }
+}
+
+/*===========CARDS===========*/
+.cards {
+  .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+
+    &:hover {
+      margin-top: -5px;
+      box-shadow: 0 8px 25px 0 #7c90b4;
+    }
+
+    & h1 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    & a {
+      margin: 40px 0 40px 0;
+    }
+  }
+
+  .card-options {
+    & i {
+      color: $gray;
+      font-size: 19px;
+      padding: 5px;
+
+      &:hover {
+        background: $weakgray;
+        border-radius: 100%;
+      }
+
+      &.code {
+        margin-right: 10px;
+      }
+
+      &.delete {
+        float: right;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cards {
+    margin-left: 350px;
+  }
+}
+
+/*===========CODIGO / MODAL===========*/
+.modal {
+
+  &__titleCode {
+    padding: 20px 0 0 24px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .modal-content {
+    &__bg-code{
+      background: $weakgray;
+      padding: 20px;
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      code {
+        white-space: nowrap;
+        font-size: 12px;
+      }
+    }
+
+    .btn-code {
+      display: flex;
+      align-items: center;
+      color: $gray;
+      margin: 10px 0 10px 0;
+      max-width: 80px;
+      border-radius: 15px;
+    }
+  }
+}
+
+/*===========DELETE CARD / MODAL===========*/
+.modal {
+  &__titleDel {
+    padding: 20px 0 0 24px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .modal-content {
+    p {
+      color: $gray;
+      margin: 0;
+    }
+    a {
+      margin: 20px 0;
+    }
+  }
+
+  .modal-footer {
+    .btn-del {
+      font-weight: bold;
+      color: red;
+    }
+  }
+}
