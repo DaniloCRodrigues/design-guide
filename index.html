@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materialize/css/materialize.css" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Desegn Guide</title>
+  </head>
+  <body>
+    <!--===========SIDENAV===========-->
+    <ul id="nav-mobile" class="sidenav sidenav-fixed">
+      <li class="logo">Logo</li>
+
+      <li class="menu-subTitle">Componentes</li>
+
+      <li><a class="menu-item waves-effect" href="#">Botões</a></li>
+      <li><a class="menu-item waves-effect" href="#">Cards</a></li>
+      <li><a class="menu-item waves-effect" href="#">Imagens</a></li>
+      <li><a class="menu-item waves-effect" href="#">Cores</a></li>
+      <li><a class="menu-item waves-effect" href="#">Modal</a></li>
+    </ul>
+
+    <!--===========NAVBAR===========-->
+    <header>
+      <div class="navbar">
+        <!--INFO-->
+        <div class="info">
+          <a
+            href="#"
+            data-target="nav-mobile"
+            class="sidenav-trigger menu-lateral"
+            ><i class="material-icons">menu</i></a
+          >
+          <div class="img-projeto"></div>
+          <h5 class="name-projeto">Nome do projeto</h5>
+
+          <button class="btn-info-open">
+            <i class="material-icons"> keyboard_arrow_down </i>
+          </button>
+          <button class="btn-info-close">
+            <i class="material-icons"> keyboard_arrow_up </i>
+          </button>
+        </div>
+
+        <!--INFO EXTRA-->
+        <div class="infoextra">
+          <h3>
+            Este projeto foi baseado na fremework Materialize
+            <a href="https://materializecss.com/">Acessar</a>
+          </h3>
+
+          <a class="btn-acessarStyle" href="https://xd.adobe.com/spec/66d66743-8f73-4622-633b-0f97e7432f50-10e7/grid">
+            <img src="./img/xd-m.png" alt="" />
+            Acessar style guide
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!--===========CARDS===========-->
+    <main>
+      <div class="row cards">
+
+        <div class="col s6 m4 l3">
+          <div class="card-panel card">
+            <h1>Main</h1>
+
+            <!--BOTÃO-->
+            <a class="waves-effect waves-light btn">button</a>
+
+            <div class="card-options">
+              <!--CODIGO-->
+              <a class="modal-trigger" href="#modalCode01">
+                <i class="waves-effect material-icons code">code</i>
+              </a>
+              <!--CODIGO / MODAL-->
+              <div id="modalCode01" class="modal">
+                <h4 class="modal__titleCode">Main</h4>
+                <div class="modal-content">
+                  <div class="modal-content__bg-code">
+                    <code>&lt;a class=&quot;waves-effect waves-light btn&quot;&gt;button&lt;/a&gt;</code>
+                    <code>&lt;a class=&quot;waves-effect waves-light btn&quot;&gt;&lt;i class=&quot;material-icons left&quot;&gt;cloud&lt;/i&gt;button&lt;/a&gt;</code>
+                    <code>&lt;a class=&quot;waves-effect waves-light btn&quot;&gt;&lt;i class=&quot;material-icons rigth&quot;&gt;cloud&lt;/i&gt;button&lt;/a&gt;</code>
+                  </div>
+                  <a href="#modal-code" class="btn-copy waves-effect btn-code" data-code="&lt;a class=&quot;waves-effect waves-light btn&quot;&gt;button&lt;/a&gt;">
+                    <i class="material-icons">file_copy</i>
+                    Copiar
+                  </a>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    href="#!"
+                    class="modal-close waves-effect waves-green btn-flat"
+                    >Fechar</a
+                  >
+                </div>
+              </div>
+
+              <!--COPIAR CODIGO-->
+              <a href="#modal-code" class="btn-copy" data-code="&lt;a class=&quot;waves-effect waves-light btn&quot;&gt;button&lt;/a&gt;">
+                <i class="waves-effect material-icons">file_copy</i>
+              </a>
+
+              <!--DELETE CARD-->
+              <a class="modal-trigger" href="#modalDel">
+                <i class="waves-effect material-icons delete">delete</i>
+              </a>
+              <!--DELETE CARD / MODAL-->
+              <div id="modalDel" class="modal">
+                  <h4 class="modal__titleDel">Excluir Componente</h4>
+                  <div class="modal-content">
+                    <p>Você tem certeza que deseja remover este componente?</p>
+                    <a class="waves-effect waves-light btn">button</a>
+                  </div>
+                  <div class="modal-footer">
+                    <a
+                      href="#!"
+                      class="modal-close waves-effect waves-green btn-flat "
+                      >Cancelar</a
+                    >
+                    <a
+                      href="#!"
+                      class="waves-effect btn-flat btn-del"
+                      >Remover</a
+                    >
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s6 m4 l3">
+          <div class="card-panel card">
+            <h1>Disabled</h1>
+
+            <!--BOTÃO-->
+            <a class="waves-effect waves-light btn disabled">button</a>
+
+            <div class="card-options">
+              <!--CODIGO-->
+              <a class="modal-trigger" href="#modalCode02">
+                <i class="waves-effect material-icons code">code</i>
+              </a>
+              <!--CODIGO / MODAL-->
+              <div id="modalCode02" class="modal">
+                <h4 class="modal__titleCode">Disabled</h4>
+                <div class="modal-content">
+                  <div class="modal-content__bg-code">
+                    <code>&lt;a class=&quot;waves-effect waves-light btn disabled&quot;&gt;button&lt;/a&gt;</code>
+                    <code>&lt;a class=&quot;waves-effect waves-light btn disabled&quot;&gt;&lt;i class=&quot;material-icons left&quot;&gt;cloud&lt;/i&gt;button&lt;/a&gt;</code>
+                    <code>&lt;a class=&quot;waves-effect waves-light btn disabled&quot;&gt;&lt;i class=&quot;material-icons rigth&quot;&gt;cloud&lt;/i&gt;button&lt;/a&gt;</code>
+                  </div>
+                  <a href="#modal-code" class="btn-copy waves-effect btn-code" data-code="&lt;a class=&quot;waves-effect waves-light btn disabled&quot;&gt;button&lt;/a&gt;">
+                    <i class="material-icons">file_copy</i>
+                    Copiar
+                  </a>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    href="#!"
+                    class="modal-close waves-effect waves-green btn-flat"
+                    >Fechar</a
+                  >
+                </div>
+              </div>
+
+              <!--COPIAR CODIGO-->
+              <a href="#modal-code" class="btn-copy" data-code="&lt;a class=&quot;waves-effect waves-light btn disabled&quot;&gt;button&lt;/a&gt;">
+                <i class="waves-effect material-icons">file_copy</i>
+              </a>
+
+              <!--DELETE CARD-->
+              <a class="modal-trigger" href="#modalDel">
+                <i class="waves-effect material-icons delete">delete</i>
+              </a>
+              <!--DELETE CARD / MODAL-->
+              <div id="modalDel" class="modal">
+                  <h4 class="modal__titleDel">Excluir Componente</h4>
+                  <div class="modal-content">
+                    <p>Você tem certeza que deseja remover este componente?</p>
+                    <a class="waves-effect waves-light btn">button</a>
+                  </div>
+                  <div class="modal-footer">
+                    <a
+                      href="#!"
+                      class="modal-close waves-effect waves-green btn-flat "
+                      >Cancelar</a
+                    >
+                    <a
+                      href="#!"
+                      class="waves-effect btn-flat btn-del"
+                      >Remover</a
+                    >
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Compiled and minified JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="materialize/js/materialize.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
